@@ -10,8 +10,7 @@ public class Main {
         persons.add(new Person("Олег", "Цой", 10));
         persons.add(new Person("Миша", "Орлов", 55));
         Collections.sort(persons, new PersonsSurnameLengthComparator());
-        PersonsSurnameLengthComparator personSurname = new PersonsSurnameLengthComparator();
-        System.out.println("Cравнение людей по принципу знатности:");
+        System.out.println("Cравнение людей по принципу знатности");
         System.out.println("Список знатных людей:");
         for (int i = 0; i < persons.size(); i++) {
             System.out.println(persons.get(i));
