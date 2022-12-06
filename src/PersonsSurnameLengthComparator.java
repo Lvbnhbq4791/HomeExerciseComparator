@@ -3,8 +3,8 @@ import java.util.Comparator;
 public class PersonsSurnameLengthComparator implements Comparator<Person> {
     protected int maxNumberLettersSurname;
 
-    public PersonsSurnameLengthComparator() {
-        this.maxNumberLettersSurname = 6;
+    public PersonsSurnameLengthComparator(int maxNumberLettersSurname ) {
+        this.maxNumberLettersSurname = maxNumberLettersSurname;
     }
 
     @Override
