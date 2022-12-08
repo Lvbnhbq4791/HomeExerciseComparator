@@ -1,9 +1,9 @@
 import java.util.*;
 
 public class Main {
-    static  int maxNumLetSurname = 6;// максимальное колличество слов в фамилии
     public static void main(String[] args) {
         ArrayList<Person> persons = new ArrayList<>();
+        int maxNumLetSurname = 6;// максимальное колличество слов в фамилии
         persons.add(new Person("Ваня", "Иванов", 30));
         persons.add(new Person("Сергей", "Митрофанов", 25));
         persons.add(new Person("Игорь", "Вавилов", 40));
