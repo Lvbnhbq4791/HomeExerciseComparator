@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.function.Predicate;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,6 +13,9 @@ public class Main {
         Collections.sort(persons, new PersonsSurnameLengthComparator(6));
         System.out.println("Cравнение людей по принципу знатности");
         System.out.println("Список знатных людей:");
+//        Predicate<Person> minAge = client->client.getAge()<18;
+//        persons.removeIf(minAge);
+        persons.removeIf(client -> client.getAge()<18);
         for (int i = 0; i < persons.size(); i++) {
             System.out.println(persons.get(i));
         }
