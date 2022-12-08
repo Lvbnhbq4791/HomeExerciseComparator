@@ -9,8 +9,6 @@ public class Main {
         persons.add(new Person("Игорь", "Вавилов", 40));
         persons.add(new Person("Петр", "Зуев", 65));
         persons.add(new Person("Олег", "Цой", 10));
-        persons.add(new Person("Антон", "Суворов", 15));
-        persons.add(new Person("Андрей", "Васенин", 13));
         persons.add(new Person("Миша", "Орлов", 55));
         Comparator<Person> comparison = (o1, o2) -> {
             if (o1.getSurname().length() >= maxNumLetSurname && o2.getSurname().length() < maxNumLetSurname)
