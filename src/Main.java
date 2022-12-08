@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Main {
-    static  int maxNumberLettersSurname = 6;// максимальное колличество слов в фамилии
+    static  int maxNumLetSurname = 6;// максимальное колличество слов в фамилии
     public static void main(String[] args) {
         ArrayList<Person> persons = new ArrayList<>();
         persons.add(new Person("Ваня", "Иванов", 30));
@@ -13,11 +13,11 @@ public class Main {
         persons.add(new Person("Андрей", "Васенин", 13));
         persons.add(new Person("Миша", "Орлов", 55));
         Comparator<Person> comparison = (o1, o2) -> {
-            if (o1.getSurname().length() >= maxNumberLettersSurname && o2.getSurname().length() < maxNumberLettersSurname)
+            if (o1.getSurname().length() >= maxNumLetSurname && o2.getSurname().length() < maxNumLetSurname)
                 return -1;
-            else if (o1.getSurname().length() < maxNumberLettersSurname && o2.getSurname().length() >= maxNumberLettersSurname)
+            else if (o1.getSurname().length() < maxNumLetSurname && o2.getSurname().length() >= maxNumLetSurname)
                 return 1;
-            else if (o1.getSurname().length() >= maxNumberLettersSurname && o2.getSurname().length() >= maxNumberLettersSurname)
+            else if (o1.getSurname().length() >= maxNumLetSurname && o2.getSurname().length() >= maxNumLetSurname)
                 return Integer.compare(o2.getAge(), o1.getAge());
             else if (o1.getSurname().length() > o2.getSurname().length())
                 return -1;
