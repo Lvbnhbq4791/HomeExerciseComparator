@@ -9,13 +9,13 @@ public class Main {
         persons.add(new Person("Игорь", "Вавилов", 40));
         persons.add(new Person("Петр", "Зуев", 65));
         persons.add(new Person("Олег", "Цой", 10));
+        persons.add(new Person("Антон", "Суворов", 15));
+        persons.add(new Person("Андрей", "Васенин", 13));
         persons.add(new Person("Миша", "Орлов", 55));
         Collections.sort(persons, new PersonsSurnameLengthComparator(6));
         System.out.println("Cравнение людей по принципу знатности");
         System.out.println("Список знатных людей:");
-//        Predicate<Person> minAge = client->client.getAge()<18;
-//        persons.removeIf(minAge);
-        persons.removeIf(client -> client.getAge()<18);
+        persons.removeIf(person -> person.getAge()<18);
         for (int i = 0; i < persons.size(); i++) {
             System.out.println(persons.get(i));
         }
