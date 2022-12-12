@@ -6,7 +6,7 @@ public class Main {
         ArrayList<Person> persons = new ArrayList<>();
         int maxNumLetSurname = 6;// максимальное колличество слов в фамилии
         persons.add(new Person("Ваня", "Иванов", 30));
-        persons.add(new Person("Сергей", "Митрофанов", 25));
+        persons.add(new Person("Сергей", "Митроф", 25));
         persons.add(new Person("Игорь", "Вавилов", 40));
         persons.add(new Person("Петр", "Зуев", 65));
         persons.add(new Person("Олег", "Цой", 10));
@@ -29,7 +29,7 @@ public class Main {
         persons.sort(comparison);
         System.out.println("Cравнение людей по принципу знатности");
         System.out.println("Список знатных людей:");
-        persons.removeIf(person -> person.getAge()<18);
+        persons.removeIf(person -> person.getAge() < 18);
         for (int i = 0; i < persons.size(); i++) {
             System.out.println(persons.get(i));
         }
